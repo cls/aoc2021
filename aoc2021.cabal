@@ -1,0 +1,7 @@
+name:                aoc2021
+version:             0.1.0.0
+synopsis:            Advent of Code 2021
+author:              Connor Lane Smith
+maintainer:          cls@lubutu.com
+build-type:          Simple
+cabal-version:       >=1.10

@@ -1,19 +1,13 @@
 input :: Read a => IO [a]
 input = map read . lines <$> getContents
 
-zipTailWith :: (a -> a -> b) -> [a] -> [b]
-zipTailWith f = zipWith f <*> drop 1
+zipDropWith :: (a -> a -> b) -> Int -> [a] -> [b]
+zipDropWith f n = zipWith f <*> drop n
 
-zipTailWith3 :: (a -> a -> a -> b) -> [a] -> [b]
-zipTailWith3 f = zipWith3 f <*> drop 1 <*> drop 2
-
-countIncreases :: Ord a => [a] -> Int
-countIncreases = sum . map fromEnum . zipTailWith (<)
-
-add3 :: Num a => a -> a -> a -> a
-add3 x y z = x + y + z
+countIncreases :: Ord a => Int -> [a] -> Int
+countIncreases n = sum . map fromEnum . zipDropWith (<) n
 
 main :: IO ()
 main = do depths <- input :: IO [Int]
-          print . countIncreases $ depths
-          print . countIncreases . zipTailWith3 add3 $ depths
+          print . countIncreases 1 $ depths
+          print . countIncreases 3 $ depths

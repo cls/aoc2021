@@ -11,3 +11,9 @@ executable 01_SonarSweep
   hs-source-dirs:      src
   build-depends:       base >=4.0
   default-language:    Haskell2010
+
+executable 02_Dive
+  main-is:             02_Dive.hs
+  hs-source-dirs:      src
+  build-depends:       base >=4.0
+  default-language:    Haskell2010

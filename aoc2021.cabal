@@ -23,3 +23,9 @@ executable 03_BinaryDiagnostic
   hs-source-dirs:      src
   build-depends:       base >=4.0
   default-language:    Haskell2010
+
+executable 05_HydrothermalVenture
+  main-is:             05_HydrothermalVenture.hs
+  hs-source-dirs:      src
+  build-depends:       base >=4.0, containers
+  default-language:    Haskell2010

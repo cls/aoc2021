@@ -18,12 +18,6 @@ executable 02_Dive
   build-depends:       base >=4.0
   default-language:    Haskell2010
 
-executable 03_BinaryDiagnostic
-  main-is:             03_BinaryDiagnostic.hs
-  hs-source-dirs:      src
-  build-depends:       base >=4.0
-  default-language:    Haskell2010
-
 executable 05_HydrothermalVenture
   main-is:             05_HydrothermalVenture.hs
   hs-source-dirs:      src

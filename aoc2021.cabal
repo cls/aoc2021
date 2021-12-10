@@ -27,5 +27,11 @@ executable 05_HydrothermalVenture
 executable 08_SevenSegmentSearch
   main-is:             08_SevenSegmentSearch.hs
   hs-source-dirs:      src
-  build-depends:       base >=4.0, containers
+  build-depends:       base >=4.0
+  default-language:    Haskell2010
+
+executable 10_SyntaxScoring
+  main-is:             10_SyntaxScoring.hs
+  hs-source-dirs:      src
+  build-depends:       base >=4.0
   default-language:    Haskell2010

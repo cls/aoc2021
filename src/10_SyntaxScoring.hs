@@ -1,3 +1,4 @@
+import Control.Monad (foldM)
 import Data.Either (partitionEithers)
 import Data.List (sort)
 
@@ -9,12 +10,11 @@ closeParen '<' = Just '>'
 closeParen _   = Nothing
 
 syntaxCheck :: String -> Either Char String
-syntaxCheck = flip check []
+syntaxCheck = foldM check ""
   where
-    check (x:xs) ys     | Just y <- closeParen x = check xs (y:ys)
-    check (x:xs) (y:ys) | x == y = check xs ys
-    check (x:_)  _      = Left x
-    check []     ys     = Right ys
+    check xs     c | Just x <- closeParen c = Right (x:xs)
+    check (x:xs) c | c == x                 = Right xs
+    check _      c                          = Left c
 
 scoreError :: Char -> Int
 scoreError ')' = 3

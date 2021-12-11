@@ -3,7 +3,8 @@ CXXFLAGS = -std=c++11 -O3 -Wall -pedantic
 LDFLAGS  = -s
 
 BIN = bin/06_Lanternfish \
-      bin/09_SmokeBasin
+      bin/09_SmokeBasin \
+      bin/11_DumboOctopus
 
 all: $(BIN)
 

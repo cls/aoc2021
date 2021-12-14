@@ -41,3 +41,9 @@ executable 12_PassagePathing
   hs-source-dirs:      src
   build-depends:       base >=4.0, containers
   default-language:    Haskell2010
+
+executable 14_ExtendedPolymerization
+  main-is:             14_ExtendedPolymerization.hs
+  hs-source-dirs:      src
+  build-depends:       base >=4.0, containers
+  default-language:    Haskell2010

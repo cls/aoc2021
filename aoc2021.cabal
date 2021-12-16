@@ -47,3 +47,9 @@ executable 14_ExtendedPolymerization
   hs-source-dirs:      src
   build-depends:       base >=4.0, containers
   default-language:    Haskell2010
+
+executable 16_PacketDecoder
+  main-is:             16_PacketDecoder.hs
+  hs-source-dirs:      src
+  build-depends:       base >=4.0
+  default-language:    Haskell2010

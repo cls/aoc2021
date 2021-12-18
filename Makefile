@@ -5,7 +5,8 @@ LDFLAGS  = -s
 BIN = bin/06_Lanternfish \
       bin/09_SmokeBasin \
       bin/11_DumboOctopus \
-      bin/15_Chiton
+      bin/15_Chiton \
+      bin/17_TrickShot
 
 all: $(BIN)
 
